@@ -1,21 +1,20 @@
 { 
     "blogs": [
         { 
-            "title": "My new website:", 
-            "body": "lorem ipsum...",
+            "title": "My First Blog", 
+            "body": "Why do we use it?\nIt is a long established fact that the reaer will be distracted",
             "author": "mario",
             "id": 1 
         },
         {
-            "title": "Welcome party!",
-            "body": "lorem ipsum...",
+            "title": "Opening Party!",
+            "body":  "Why do we use it?\nIt is a long established fact that the reaer will be distracted",
             "author": "yoshi",
             "id": 2
         },
-        
         { 
             "title": "Web dev top tips",
-            "body": "lorem ipsum...",
+            "body": "Why do we use it?\nIt is a long established fact that the reaer will be distracted",
             "author": "mario", 
             "id": 3 
         }
