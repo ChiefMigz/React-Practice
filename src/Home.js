@@ -5,6 +5,7 @@ const Home = () => {
     const [blogs, setBlogs] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(null);
 
     useEffect(() => {
         setTimeout(() => { //simulate idea (don't do in real application)
@@ -17,9 +18,11 @@ const Home = () => {
             .then(data => {
                 setBlogs(data);
                 setIsPending(false);
+                setError(null);
             })
             .catch(err => {
-                console.log(err.message);
+                setErrorMessage(err.message);
+                setIsPending(false);
                 setError(true);
             });
         }, 1000);
@@ -28,7 +31,7 @@ const Home = () => {
     return ( 
         <div className="home">
             {isPending && <div>Loading...</div>}
-            {error && <div>{err.message}</div>}
+            {error && <div>{errorMessage}</div>}
             {blogs && <BlogList blogs={blogs} title={'All blogs'} />}
         </div>
      );
