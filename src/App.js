@@ -1,22 +1,24 @@
 import './App.css';
 import Navbar from './Navbar';
 import Home from './Home'
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Create from './Create';
+import BlogDetails from './BlogDetails';
 
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/create" element={<Create/>}/>
+          <Route path="/blogs/:id" element={<BlogDetails/>}/>
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
-export default App;
+export default App;  
